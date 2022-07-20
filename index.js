@@ -7,7 +7,7 @@ function getComputerChoice() {
     return choices[choice];
 }
 
-function play(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     playerSelection = String(playerSelection).toLowerCase();
 
     if (playerSelection === 'rock') {
@@ -39,7 +39,28 @@ function play(playerSelection, computerSelection) {
 }
 
 function getPlayerChoice() {
-    return prompt("Enter your choice from (paper, rock, scissors)", 'rock')
+    return prompt("Enter your choice from (paper, rock, scissors)", 'rock');
 }
 
+function game() {
+    computerScore = 0;
+    playerScore = 0;
 
+    for(let i = 0; i < 5 ; i++) {
+        let resultOfSingleRound = playRound(getPlayerChoice(), getComputerChoice());
+        console.log(resultOfSingleRound);
+        if(resultOfSingleRound.includes('Win'))
+            playerScore++;
+        else if(resultOfSingleRound.includes('Lose'))
+            computerScore++;
+    }
+
+    if(computerScore > playerScore)
+        console.log('Game Over!');
+    else if(playerScore > computerScore) 
+        console.log('Congratulations! You Won.');
+    else if(playerScore === computerScore)
+        console.log("It's a draw")
+}
+
+game()
