@@ -38,5 +38,8 @@ function play(playerSelection, computerSelection) {
 
 }
 
-choice = getComputerChoice()
-play('rock',getComputerChoice())
+function getPlayerChoice() {
+    return prompt("Enter your choice from (paper, rock, scissors)", 'rock')
+}
+
+
