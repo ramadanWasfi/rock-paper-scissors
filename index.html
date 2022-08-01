@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
 </head>
 <body>
+    <div class="main">
+        <h1>Rock Paper Scissors</h1>
+        <p> make your choice </p>
+        <div class="choices">
+            <button class="choice"><img src="./images/rock.png" alt="rock"></button>
+            <button class="choice"><img src="./images/paper.png" alt="paper"></button>
+            <button class="choice"><img src="./images/scissors.png" alt="scissors"></button>
+        </div>
+        <div class="scores">
+            <p>You</p>
+            <p>Computer</p>
+        </div>
+        <div id="scores">
+            <p id="playerScore">0</p>
+            <p id="computerScore">0</p>
+        </div>
+        <p class="state"></p>
+    </div>
     
+   
 </body>
 </html>
